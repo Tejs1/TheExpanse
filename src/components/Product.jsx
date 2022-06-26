@@ -25,7 +25,7 @@ function Product() {
           Max Crew / Human :<span>4</span>
         </span>
         <span className="length spec">
-          Length / Meters :<span>111.5</span>
+          PRICE / Starcoin:<span>111</span>
         </span>
         <span className="mass spec">
           Mass / Kg :<span>1608.205</span>

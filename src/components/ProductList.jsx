@@ -27,7 +27,7 @@ function ProductList() {
               Max Crew / Human :<span>80</span>
             </span>
             <span className="length spec">
-              Length / Meters :<span>480.0</span>
+              PRICE / Starcoin:<span>480.0</span>
             </span>
             <span className="mass spec">
               Mass / Kg :<span>109860.179</span>
@@ -39,7 +39,7 @@ function ProductList() {
                 height="31"
                 width="31"
                 src="../styles/img/ships/Aegis.png"
-                alt="logo"
+                alt="Anvil"
               />
             </span>
           </div>
@@ -64,22 +64,22 @@ function ProductList() {
           </div>
           <div className="bottom">
             <span className="crew spec">
-              Max Crew / Human :<span>2</span>
+              Max CREW / Human :<span>2</span>
             </span>
             <span className="length spec">
-              Length / Meters :<span>22.0</span>
+              PRICE / Starcoin:<span>22.0</span>
             </span>
             <span className="mass spec">
               Mass / Kg :<span>86454</span>
             </span>
             <span className="manufacturer spec">
-              Manufacturer :
+              ManufactuREr :
               <img
                 className="logo"
                 height="31"
                 width="31"
                 src="../styles/img/ships/Anvil.png"
-                alt="logo"
+                alt="BANU"
               />
             </span>
           </div>
