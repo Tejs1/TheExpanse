@@ -1,1 +1,133 @@
-@import url(https://expn.netlify.app/styles/navbar.css);
+.km-nav-logo h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.km-nav-bar {
+  background-color: var(--nav-background);
+  border-top: 1px solid var(--nav-border);
+  border-bottom: 1px solid var(--nav-border);
+}
+#nav {
+  z-index: 10;
+}
+#nav * {
+  z-index: 11;
+}
+.km-nav-searchbar input {
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 0.75rem;
+  color: var(--input-border);
+  display: block;
+  border-color: var(--input-border);
+}
+
+.km-nav-logo a {
+  text-decoration: none;
+  color: var(--font);
+}
+.km-btn {
+  color: var(--font2);
+  background-color: var(--nav-border);
+}
+.cta-btn {
+  margin-left: 1rem;
+  color: #7ad2dd;
+  font-size: 0.813rem;
+  display: inline-block;
+  height: 2.75rem;
+  line-height: 3.063rem;
+  padding: 0 2.5rem;
+  position: relative;
+  text-transform: uppercase;
+}
+.cta-btn div {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: transform 0.2s;
+  backface-visibility: hidden;
+}
+
+.cta-btn div:first-of-type {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  border-image-source: url("/public/img/btn/button_foreground_border.svg");
+  border-image-slice: 20 20 fill;
+  border-image-width: 6.25rem;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  transform: translateX(0) translateY(0);
+}
+
+.cta-btn div:last-of-type {
+  border: 1px solid transparent;
+  border-image-source: url("/public/img/btn/button_background_border.svg");
+  border-image-slice: 39 39 fill;
+  border-image-width: 6.25rem;
+  width: calc(100% + 2.125rem);
+  height: calc(100% + 2rem);
+  left: -1.063rem;
+  top: -1.063rem;
+  transform: translateX(5px) translateY(5px);
+  z-index: 3;
+}
+.cta-btn__text {
+  font-family: "Orbitron";
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  color: #fbfeff;
+  font-size: 0.813rem;
+  font-weight: 200;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.bubble.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  padding: 0.25rem;
+  border-radius: 1rem;
+  letter-spacing: 0;
+  line-height: 0.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: var(--catalog__secondary-font, "Quantico", sans-serif);
+  color: var(--counter-digit);
+  background-color: var(--counter-bg);
+}
+.km.badge.i {
+  padding: 0.2rem;
+  margin: 0.3rem;
+}
+#icon-container svg,
+#icon-container,
+#icon-container svg {
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -15;
+}
+.cta-btn.main div:last-of-type {
+  width: calc(100% + 6.25rem);
+  height: calc(100% + 68px);
+  transform: translateX(-26px) translateY(-0.813rem);
+}
+.cta-btn.main div:first-of-type {
+  width: calc(100% + 3.125rem);
+  height: calc(100% + 1.125rem);
+  transform: translateX(-25px) translateY(-0.75rem);
+}
+.main .cta-btn__text {
+  font-size: 2rem;
+}
