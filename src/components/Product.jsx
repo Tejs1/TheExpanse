@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import { modifyLink } from "../Utils/modifyLink";
 
 function Product({ ship }) {
@@ -11,20 +11,23 @@ function Product({ ship }) {
       <div className="center ">
         <img src={modifyLink(store_large)} className="ship" alt={name} />
         <div className="blue-overlay"></div>
-        <a className="filet" href="/ships/hurricane">
+        {/* .blue-overlay should come when we hover */}
+        <Link className="filet" to={`ships/${name}`}>
           <span className="name">
-            {name}
-
-            <span className="focus"> - {focus}</span>
+            {name} <span className="focus"> - {focus}</span>
           </span>
-        </a>
+        </Link>
 
         <div className="content"></div>
 
-        <a className="smallbtn" href="/ships/hurricane">
+        <Link className="smallbtn a" to={""}>
           <span className="smallbtn-top">Add To Cart</span>
           <span className="smallbtn-bottom"></span>
-        </a>
+        </Link>
+        <Link to={`ships/${name}`} class="smallbtn b" data-sku="">
+          <span class="smallbtn-top">VIEW specs</span>
+          <span class="smallbtn-bottom"></span>
+        </Link>
       </div>
       <div className="bottom">
         <span className="crew spec">
