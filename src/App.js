@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Store from "./components/Store";
 
@@ -6,8 +7,24 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Navbar />
-        <Store />
       </header>
+
+      <Routes>
+        {/* <Route path="/" element={<ProductListing />} /> */}
+        <Route path="store" element={<Store />} />
+        {/* <Route path="cart" element={<Cart />} /> */}
+        {/* <Route path="whishlist" element={<Wishlist />} /> */}
+        {/* <Route path="auth" element={<Auth />} /> */}
+        {/* <Route path="product/:id" element={<Product />} /> */}
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Routes>
     </div>
   );
 }
