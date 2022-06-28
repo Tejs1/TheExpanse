@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Store from "./components/Store";
+import { Store } from "./components/Store";
+import { ShipDetails } from "./components/ShipDetails";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         {/* <Route path="cart" element={<Cart />} /> */}
         {/* <Route path="whishlist" element={<Wishlist />} /> */}
         {/* <Route path="auth" element={<Auth />} /> */}
-        {/* <Route path="product/:id" element={<Product />} /> */}
+        <Route path="/store/ships/:id" element={<ShipDetails />} />
         <Route
           path="*"
           element={

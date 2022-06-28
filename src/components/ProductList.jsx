@@ -8,7 +8,7 @@ function ProductList() {
     <div id="store-wrapper">
       <ul className="ship-listing">
         {list.map((ship) => (
-          <Product ship={ship} />
+          <Product key={ship.id} ship={ship} />
         ))}
       </ul>
     </div>

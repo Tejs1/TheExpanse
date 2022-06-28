@@ -3,7 +3,7 @@ import "./Store.css";
 import Filter from "./Filter";
 import ProductList from "./ProductList";
 
-function Store() {
+export function Store() {
   return (
     <div className="container">
       <Filter />
@@ -11,5 +11,3 @@ function Store() {
     </div>
   );
 }
-
-export default Store;
