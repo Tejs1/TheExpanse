@@ -12,11 +12,11 @@ function Navbar() {
       </div>
       <div className="km-right-nav">
         <Link to="store">
-          <button className="cta-btn">
+          <span className="cta-btn">
             <span className="cta-btn__text">
               <strong>STORE</strong>
             </span>
-          </button>
+          </span>
         </Link>
         <div className="km-nav-searchbar">
           <input type="search" placeholder="Search..." className="km-input" />
@@ -24,7 +24,7 @@ function Navbar() {
         <div className="km-nav-user">
           <div className="km-nav-icons">
             <Link to="cart">
-              <button className="km badge i">
+              <span className="km badge i">
                 <svg fill="none" viewBox="0 0 16 16" width="30" height="30">
                   <path
                     fill="#E2E5E9"
@@ -34,34 +34,34 @@ function Navbar() {
                   ></path>
                 </svg>
                 <span className="bubble icon">2</span>
-              </button>
+              </span>
             </Link>
             <Link to="whishlist">
-              <button className="km badge i">
+              <span className="km badge i">
                 <svg height="30" viewBox="0 0 24 24" width="30" fill="#E2E5E9">
                   <path d="M0 0h24v24H0V0z" fill="none" />
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                 </svg>
-              </button>
+              </span>
             </Link>
           </div>
           <Link to="login">
-            <button className="cta-btn">
+            <span className="cta-btn">
               <div></div>
               <span className="cta-btn__text">
                 <strong>LOGIN</strong>
               </span>
               <div></div>
-            </button>
+            </span>
           </Link>
           <Link to="signUp">
-            <button className="cta-btn">
+            <span className="cta-btn">
               <div></div>
               <span className="cta-btn__text">
                 <strong>SIGN UP</strong>
               </span>
               <div></div>
-            </button>
+            </span>
           </Link>
         </div>
       </div>
