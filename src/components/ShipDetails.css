@@ -1,0 +1,34 @@
+#intro .headline .titles h1 img {
+  height: 45px;
+  width: 45px;
+}
+
+#intro {
+  z-index: 13;
+}
+#intro .headline {
+  height: 400px;
+  position: relative;
+  margin-bottom: 15px;
+}
+#intro .headline .titles {
+  position: absolute;
+  bottom: 0;
+  left: 55px;
+  z-index: 3;
+}
+#intro .headline .titles div {
+  font-size: 32px;
+  color: #2c799f;
+  font-family: "Electrolize";
+}
+
+#intro .headline .thumb {
+  position: relative;
+  height: 400px;
+}
+#intro .headline .thumb img {
+  position: relative;
+  z-index: 1;
+  height: 400px;
+}

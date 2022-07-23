@@ -5,7 +5,6 @@ function Product({ ship }) {
   const { name, focus, max_crew, price, mass, manufacturer, media, id } = ship;
   const { store_large } = media[0].images;
   const { logo: manufacturer_logo } = manufacturer.media[0].images;
-  console.log(ship.id);
 
   return (
     <li className="ship-item">
