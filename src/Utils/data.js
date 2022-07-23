@@ -968,7 +968,7 @@ export const data = {
     {
       afterburner_speed: "1140",
       beam: "8.0",
-      cargocapacity: null,
+      cargocapacity: 2,
       chassis_id: "1",
       compiled: {
         RSIAvionic: {

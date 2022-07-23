@@ -169,16 +169,17 @@ div.prod-status p {
 #intro .stats table {
   display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
 }
 #intro .stats table thead tr,
 tbody tr {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  border-top: solid 1px #1b4268;
+  justify-content: space-between;
 }
 #intro .stats table th,
 td {
-  width: 7rem;
+  width: 10rem;
   text-align: center;
+  border: solid 1px #1b4268;
 }

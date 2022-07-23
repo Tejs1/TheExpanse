@@ -20,6 +20,7 @@ export function ShipDetails() {
     focus,
     length,
     height,
+    scm_speed,
     compiled: {
       RSIAvionic: {
         computers: [{ size: computers_size }],
@@ -89,10 +90,10 @@ export function ShipDetails() {
             <table>
               <thead>
                 <tr>
-                  <th>Focus</th>
                   <th>Lengh</th>
                   <th>Height</th>
                   <th>Mass [KG]</th>
+                  <th>SCM Speed</th>
                   <th>Cargo Capacity</th>
                   <th>Price</th>
                   <th>Crew</th>
@@ -100,10 +101,10 @@ export function ShipDetails() {
               </thead>
               <tbody data-testid="app-tbody">
                 <tr>
-                  <td>{focus}</td>
                   <td>{length} m</td>
                   <td>{height} m</td>
                   <td>{mass} Kg</td>
+                  <td>{scm_speed} m/s</td>
                   <td>{cargocapacity}</td>
                   <td>{price}</td>
                   <td>{max_crew}</td>
@@ -113,12 +114,14 @@ export function ShipDetails() {
             <table>
               <thead>
                 <tr>
+                  <th>Focus</th>
                   <th>Radar</th>
                   <th>Computers</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
+                  <td>{focus}</td>
                   <td>{computers_size} computer</td>
                   <td>{radar_size} radar</td>
                 </tr>
