@@ -1,3 +1,14 @@
+#intro h1,
+#intro h2,
+#intro h3,
+#intro h4,
+#intro h5,
+#intro h6 {
+  font-family: "Electrolize", Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: normal;
+}
+
 #intro .headline .titles h1 img {
   height: 45px;
   width: 45px;
@@ -5,6 +16,9 @@
 
 #intro {
   z-index: 13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 #intro .headline {
   height: 400px;
@@ -23,12 +37,148 @@
   font-family: "Electrolize";
 }
 
+#intro .headline .titles h1 {
+  font-size: 48px;
+  color: #b1d8f1;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 660px;
+  line-height: 46px;
+}
+#intro .headline .titles h1 span {
+  color: #6ac1e6;
+  font-size: 11px;
+  font-family: "Electrolize";
+  display: inline-block;
+  margin: 0 10px;
+  text-shadow: 0px 0px 15px rgba(0, 132, 255, 1);
+}
+
 #intro .headline .thumb {
   position: relative;
   height: 400px;
 }
 #intro .headline .thumb img {
+  height: 400px;
+  width: 1200px;
   position: relative;
   z-index: 1;
-  height: 400px;
+}
+
+#intro .headline .thumb .mask {
+  background: url("https://robertsspaceindustries.com/rsi/static/images/store/shipdetail-space-mask.png")
+    no-repeat center center;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#intro .subnav-placeholder {
+  height: 49px;
+}
+#intro .subnav {
+  position: relative;
+  width: 100%;
+  height: 49px;
+  z-index: 1500;
+}
+#intro .subnav::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+#intro .subnav .wcontent {
+  padding-top: 15px;
+  height: 34px;
+  background: url("https://robertsspaceindustries.com/rsi/static/images/store/ship-detail/subnav-bar.png")
+    repeat-x top center;
+}
+#intro .subnav a.anchor.first {
+  margin-left: 45px;
+}
+#intro .subnav a.anchor {
+  display: block;
+  float: left;
+  height: 21px;
+  font-family: "Electrolize";
+  font-size: 12px;
+  color: #fff;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 0 15px #00e7ff;
+  border-bottom: 4px solid #00e7ff;
+}
+section#intro .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 24px 0 0 90px;
+}
+section#intro .description .excerpt {
+  max-width: 60%;
+  float: left;
+  font-family: "Electrolize";
+  font-size: 14px;
+  color: #b1d8f1;
+  margin: 0px 0 25px;
+}
+div.prod-status {
+  margin-bottom: 16px;
+}
+div.prod-status span {
+  font-family: "Electrolize";
+  font-size: 16px;
+  color: #00deff;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #0084ff;
+}
+div.prod-status p {
+  font-family: "Electrolize";
+  color: #88a3ad;
+  padding: 0;
+  margin: 0;
+}
+#intro .description .holobtn {
+  text-transform: uppercase;
+}
+.holobtn {
+  width: 261px;
+  height: 54px;
+  display: block;
+  position: relative;
+}
+.description_cta {
+  display: flex;
+  flex-direction: row;
+}
+#intro .smallbtn.a,
+#intro .smallbtn.b {
+  top: 0;
+  right: 0;
+}
+
+#intro .stats {
+  width: 60%;
+}
+#intro .stats table {
+  display: flex;
+  flex-direction: column;
+}
+#intro .stats table thead tr,
+tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: solid 1px #1b4268;
+}
+#intro .stats table th,
+td {
+  width: 7rem;
+  text-align: center;
 }

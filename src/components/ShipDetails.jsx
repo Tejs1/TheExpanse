@@ -1,5 +1,6 @@
 import React from "react";
 import "./ShipDetails.css";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { data } from "../Utils/data";
 import { modifyLink } from "../Utils/modifyLink";
@@ -9,15 +10,27 @@ export function ShipDetails() {
   const { id } = useParams();
   const currentShip = list.find((ship) => ship.id === id);
   const {
+    cargocapacity,
     description,
     manufacturer,
     name: ship_name,
+    price,
+    mass,
+    max_crew,
+    focus,
+    length,
+    height,
+    compiled: {
+      RSIAvionic: {
+        computers: [{ size: computers_size }],
+        radar: [{ size: radar_size }],
+      },
+    },
     media: [
       {
         images: { store_slideshow_large },
       },
     ],
-    production_status,
   } = currentShip;
   const {
     name: manufacturer_name,
@@ -28,12 +41,12 @@ export function ShipDetails() {
     ],
     known_for,
   } = manufacturer;
-  console.log(store_slideshow_large);
+
   return (
     <section id="intro">
       <div className="headline ">
         <div className="titles">
-          <div className="manufacturer">{manufacturer_name}</div>
+          <div className="manufacturer">-{manufacturer_name}</div>
           <h1>
             {ship_name}
             <span>FROM</span>
@@ -48,8 +61,6 @@ export function ShipDetails() {
         <div className="thumb">
           <img
             src={modifyLink(store_slideshow_large)}
-            width="1200"
-            height="400"
             alt={ship_name + " image"}
           />
           <div className="mask"></div>
@@ -58,19 +69,10 @@ export function ShipDetails() {
 
       <div id="overview">
         <div className="subnav-placeholder">
-          <div className="subnav js-subnav-ship clearfix trans-02s">
-            <div className="wcontent clearfix no-variant">
-              <a
-                href="#overview"
-                className="trans-02s js-scrollto anchor first active"
-              >
+          <div className="subnav ">
+            <div className="wcontent ">
+              <a href="#overview" className=" anchor first ">
                 Overview
-              </a>
-              <a href="#features" className="trans-02s js-scrollto anchor">
-                Media
-              </a>{" "}
-              <a href="#holo-viewer" className="trans-02s js-scrollto anchor">
-                Technical overview
               </a>
             </div>
           </div>
@@ -78,12 +80,64 @@ export function ShipDetails() {
 
         <div className="description clearfix">
           <div className="excerpt">{description}</div>
-
           <div className="clearfix"></div>
-
           <div className="prod-status green">
-            <span> {production_status}</span>
+            <span> Statistics</span>
             <p></p>
+          </div>
+          <div className="stats">
+            <table>
+              <thead>
+                <tr>
+                  <th>Focus</th>
+                  <th>Lengh</th>
+                  <th>Height</th>
+                  <th>Mass [KG]</th>
+                  <th>Cargo Capacity</th>
+                  <th>Price</th>
+                  <th>Crew</th>
+                </tr>
+              </thead>
+              <tbody data-testid="app-tbody">
+                <tr>
+                  <td>{focus}</td>
+                  <td>{length} m</td>
+                  <td>{height} m</td>
+                  <td>{mass} Kg</td>
+                  <td>{cargocapacity}</td>
+                  <td>{price}</td>
+                  <td>{max_crew}</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>Radar</th>
+                  <th>Computers</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{computers_size} computer</td>
+                  <td>{radar_size} radar</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="description_cta">
+            <Link className="smallbtn a holobtn add-to-cart" to={"/"}>
+              <span className="smallbtn-top">Add To Cart</span>
+              <span className="smallbtn-bottom"></span>
+            </Link>
+            <Link
+              to={`ships/${id}`}
+              className="smallbtn b holobtn add-to-whishlist"
+              ship={ship_name}
+            >
+              <span className="smallbtn-top">Add to Whishlist</span>
+              <span className="smallbtn-bottom"></span>
+            </Link>
           </div>
         </div>
       </div>
