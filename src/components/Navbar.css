@@ -1,3 +1,41 @@
+.km-nav-bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: var(--gray-500);
+  background-color: var(--gray-300);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 0 auto;
+}
+.km-right-nav {
+  display: flex;
+}
+.km-nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.km-nav-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.km-nav-searchbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.km .material-icons {
+  font-size: 2rem;
+}
+
 .km-nav-logo h1 {
   font-size: 2rem;
   letter-spacing: 2px;
@@ -28,6 +66,36 @@
 .km-btn {
   color: var(--font2);
   background-color: var(--nav-border);
+}
+
+.km .bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--indigo-300);
+  color: var(--grey-100);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  height: 1.125rem;
+  min-width: 1.125rem;
+}
+.km.badge {
+  position: relative;
+}
+.km .bubble.m {
+  height: 1.5rem;
+  padding: 0rem 0.25rem;
+  font-size: 1.3rem;
+}
+.km .bubble.l {
+  height: 2rem;
+  padding: 0.25 0.5rem;
+  font-size: 1.7rem;
+}
+.km .bubble.icon {
+  transform: translate(-60%, -40%);
+}
+.km .bubble.m.icon {
+  transform: translate(-60%, -30%);
 }
 .cta-btn {
   margin-left: 1rem;
