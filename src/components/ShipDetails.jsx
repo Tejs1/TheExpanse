@@ -67,7 +67,6 @@ export function ShipDetails() {
           <div className="mask"></div>
         </div>
       </div>
-
       <div id="overview">
         <div className="subnav-placeholder">
           <div className="subnav ">
@@ -78,7 +77,6 @@ export function ShipDetails() {
             </div>
           </div>
         </div>
-
         <div className="description clearfix">
           <div className="excerpt">{description}</div>
           <div className="clearfix"></div>
@@ -90,13 +88,13 @@ export function ShipDetails() {
             <table>
               <thead>
                 <tr>
-                  <th>Lengh</th>
-                  <th>Height</th>
-                  <th>Mass [KG]</th>
-                  <th>SCM Speed</th>
-                  <th>Cargo Capacity</th>
-                  <th>Price</th>
-                  <th>Crew</th>
+                  <th title="length">Lengh</th>
+                  <th title="height">Height</th>
+                  <th title="mass">Mass [KG]</th>
+                  <th title="speed">SCM Speed</th>
+                  <th title="capacity">Capacity</th>
+                  <th title="price">Price</th>
+                  <th title="crew">Crew</th>
                 </tr>
               </thead>
               <tbody data-testid="app-tbody">
@@ -114,9 +112,9 @@ export function ShipDetails() {
             <table>
               <thead>
                 <tr>
-                  <th>Focus</th>
-                  <th>Radar</th>
-                  <th>Computers</th>
+                  <th title="focus">Focus</th>
+                  <th title="radar">Radar</th>
+                  <th title="computers">Computers</th>
                 </tr>
               </thead>
               <tbody>
