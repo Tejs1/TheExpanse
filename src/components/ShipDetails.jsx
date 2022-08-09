@@ -136,7 +136,7 @@ export function ShipDetails() {
               className="smallbtn b holobtn add-to-whishlist"
               ship={ship_name}
             >
-              <span className="smallbtn-top">Add to Whishlist</span>
+              <span className="smallbtn-top">Whishlist</span>
               <span className="smallbtn-bottom"></span>
             </Link>
           </div>

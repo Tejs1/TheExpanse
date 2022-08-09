@@ -179,6 +179,7 @@ tbody tr {
 }
 #intro .stats table th,
 td {
+  font-family: "Electrolize", Arial, Helvetica, sans-serif;
   display: inline-flex;
   justify-content: center;
   align-items: center;
