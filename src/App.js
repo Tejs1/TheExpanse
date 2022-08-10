@@ -2,6 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { Store } from "./components/Store";
 import { ShipDetails } from "./components/ShipDetails";
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
         <Route path="/store" element={<Store />} />
         {/* <Route path="cart" element={<Cart />} /> */}
         {/* <Route path="whishlist" element={<Wishlist />} /> */}
-        {/* <Route path="auth" element={<Auth />} /> */}
+        <Route path="login" element={<Login />} />
+        <Route path="signUp" element={<SignUp />} />
         <Route path="/store/ships/:id" element={<ShipDetails />} />
         <Route
           path="*"
