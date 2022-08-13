@@ -1,0 +1,251 @@
+.container {
+  height: max-content;
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.filter {
+  float: left;
+  margin: 42px 0 0;
+  min-height: 850px;
+  padding: 0;
+  position: relative;
+  width: 276px;
+}
+#store-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+}
+#store-wrapper .ship-item {
+  height: 290px;
+  width: 820px;
+  position: relative;
+  margin: 40px 0px 120px 0;
+  border-bottom: 1px solid #1b4268;
+  border-top: 1px solid #1b4268;
+}
+.ships-listing {
+  clear: both;
+  float: right;
+  list-style: none;
+  margin: -40px 0 0;
+  overflow: hidden;
+  padding: 0;
+}
+.center {
+  z-index: 3;
+  position: a;
+  top: 0;
+  left: 0;
+  width: 818px;
+  height: 288px;
+  border: 1px solid #1b4268;
+}
+.content {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  opacity: 1;
+  width: 255px;
+  height: 288px;
+  background-color: rgba(0, 12, 19, 0.8);
+  z-index: 6;
+}
+.center .filet {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  left: -41px;
+  top: 50%;
+  margin-top: -68px;
+  width: 901px;
+  height: 136px;
+  background: url("/public/img/ships/filet_bg.png") center center;
+}
+.center .filet .name {
+  position: absolute;
+  left: 65px;
+  top: 50%;
+  margin-top: -17px;
+  line-height: 34px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #c1eefe;
+}
+
+.center .filet .name span {
+  font-size: 14px;
+  color: #6fd8ff;
+  line-height: 34px;
+}
+#store-wrapper .ship-item .center .blue-overlay {
+  z-index: 3;
+  width: 818px;
+  height: 290px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("/public/img/ships/game-package-blue-overlay.png") repeat;
+}
+
+.smallbtn {
+  right: 75px;
+  z-index: 6;
+  position: absolute;
+  top: 91px;
+  width: 200px;
+  height: 80px;
+  display: block;
+}
+.smallbtn-top {
+  background-image: url("/public/img/ships/halo-add-cart-btn-new.png");
+  color: #fbfeff;
+  text-shadow: none;
+  background: url("/public/img/ships/halo-add-cart-btn-new.png") no-repeat
+    center -10px;
+  width: 200px;
+  height: 80px;
+  z-index: 2;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 42px;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.smallbtn-bottom {
+  background-image: url("/public/img/ships/halo-add-cart-btn-new.png");
+  color: #fbfeff;
+  text-shadow: none;
+  background: url("/public/img/ships/halo-add-cart-btn-new.png") no-repeat
+    center -110px;
+  width: 200px;
+  height: 80px;
+  z-index: 1;
+  left: 5px;
+  top: 8px;
+  position: absolute;
+  display: block;
+}
+#store-wrapper .ship-item > .bottom {
+  bottom: -31px;
+  left: 8px;
+  position: absolute;
+  width: 800px;
+  height: 31px;
+  background: url("/public/img/ships/specs.png") bottom right;
+  z-index: 2;
+  background-size: cover;
+}
+
+.bottom .spec span {
+  font-size: 12px;
+  color: #c9f1ff;
+  letter-spacing: 1px;
+  margin-left: 1px;
+}
+#store-wrapper .ship-item > .bottom .spec {
+  opacity: 1;
+  line-height: 32px;
+  font-size: 12px;
+  color: #87c2dd;
+  display: inline-block;
+  width: 174px;
+  text-align: center;
+}
+#store-wrapper .ship-item > .bottom .spec img {
+  vertical-align: middle;
+  height: 31px;
+  width: 31px;
+}
+
+label .checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-bar {
+  color: #87c2dd;
+  width: 18.75rem;
+  min-height: 80vh;
+  border-right: 1px solid var(--nav-border);
+  padding: 2rem;
+}
+
+.filter-comp {
+  display: flex;
+
+  justify-content: space-between;
+  margin: 1rem 0;
+  flex-direction: column;
+}
+.filter-comp a {
+  color: #87c2dd;
+}
+.flex-row {
+  flex-direction: row;
+  align-items: center;
+}
+.filter-heading {
+  margin-bottom: 0.5rem;
+}
+.range-list {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: stretch;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+.weight {
+  margin-left: 1rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4rem;
+}
+.list li input {
+  margin-right: 1rem;
+}
+.range {
+  width: 20px;
+  -webkit-appearance: slider-vertical;
+  padding-top: 0.2rem;
+}
+
+.list {
+  list-style: none;
+}
+.list li {
+  padding: 0.2rem 0;
+}
+.list input,
+label {
+  cursor: pointer;
+}
+input[type="checkbox"],
+input {
+  accent-color: #87c2dd;
+  background-color: var(--font2);
+}
+
+#whishlist {
+  text-align: center;
+}
+.smallbtn.a {
+  top: 65px;
+  right: 40px;
+}
+.smallbtn.b {
+  top: 130px;
+  right: 40px;
+}
