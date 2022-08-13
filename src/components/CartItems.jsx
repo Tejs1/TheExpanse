@@ -254,6 +254,41 @@ export function CartItems() {
               </div>
             </div>
           </div>
+          <div class="ContinueButton">
+            <div class="ContinueButton-clipper">
+              <div class="PriceCompact">
+                <div class="Price-price-bloc">
+                  <span class="Price-price">
+                    <span class="Price-price-integer">390</span>
+                  </span>
+                  <div class="Price-price-extra">
+                    <span class="Price-currency-code">USD</span>
+                    <span class="Price-decimals">.00</span>
+                  </div>
+                  <span class="Price-currency-symbol">$</span>
+                </div>
+                <pre class="PriceFrequency"></pre>
+              </div>
+            </div>
+            <button type="button" class="CtaClipper ContinueButton-continue">
+              <div class="CtaClipper__content">
+                <figure class="CtaClipper__icon">
+                  <svg
+                    viewBox="0 0 21 12"
+                    width="1em"
+                    height="1em"
+                    class="cta__icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.242 11.078l8.336-8.336A1.61 1.61 0 0019.577.47a1.602 1.602 0 00-2.272 0l-7.198 7.199-7.2-7.2A1.61 1.61 0 00.638.47a1.602 1.602 0 00-.002 2.272l8.337 8.336a1.6 1.6 0 001.133.469c.414.002.823-.156 1.137-.469z"
+                    ></path>
+                  </svg>
+                </figure>
+                <span class="CtaClipper__text CtaClipper__title">continue</span>
+              </div>
+            </button>
+          </div>
         </section>
       </div>
     </div>

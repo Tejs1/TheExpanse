@@ -270,7 +270,111 @@
     fill: #c6a758;
     transition: fill 0.25s ease;
   }
-  .clipper {
+
+ .ContinueButton {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #3d4850;
+}
+ .ContinueButton .ContinueButton-clipper {
+  padding: 16px 16px 16px 20px;
+  background: #3d4850;
+ 
+}
+ .PriceCompact {
+  font-size: 1rem;
+  letter-spacing: 0px;
+  display: inline-block;
+  position: relative;
+  padding-left: 8px;
+}
+ .PriceCompact .Price-price-bloc {
+  font-family: var( "Quantico", sans-serif);
+  font-weight: bold;
+  font-size: 1em;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.PriceCompact .Price-price {
+  color:  #ffffff;
+  font-size: 1.8em;
+  margin-right: 2px;
+  position: relative;
+}
+ .PriceCompact .Price-price-extra {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 2px;
+}
+ .PriceCompact .Price-currency-code {
+  color: #ffffff;
+  font-size: .75em;
+  text-align: right;
+}
+.PriceCompact .Price-currency-code {
+  color: #ffffff;
+  font-size: .75em;
+  text-align: right;
+}
+.PriceCompact .Price-decimals {
+  color: #ffffff;
+}
+ .PriceCompact .Price-currency-symbol {
+  position: absolute;
+  left: -0.8em;
+  top: 4px;
+  color: #ffffff;
+  font-size: .8em;
+}
+ pre.PriceFrequency {
+  position: absolute;
+  bottom: -16px;
+  right: 0;
+  margin: unset;
+  text-align: right;
+  font-family: "Quantico",sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.2;
+  color: #f3e3ac;
+  white-space: nowrap;
+}
+
+.CtaClipper {
+  align-items: center;
+  padding: 0 32px 0 32px;
+  background-color: var(--catalog__button-bg-default, var(--ctawidget-color-cta-bg, #da6511));
+  transition: background-color .25s ease;
+  height: 60px;
+  
+}
+.CtaClipper__content {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+ .ContinueButton .cta__icon {
+  transform: rotate(-90deg);
+}
+ .CtaClipper__icon path {
+  fill:  #090e11;
+  transition: fill .25s ease;
+}
+ .CtaClipper__text {
+  font-family:  "Quantico", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color:  #090e11;
+  transition: color .25s ease;
+}
+.clipper {
     position: sticky;
     top: 6rem;
     width: 23.75rem;
