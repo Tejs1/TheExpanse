@@ -6,8 +6,10 @@ import "./cart.css";
 function Cart() {
   return (
     <div className="Cart">
-      <CartItems />
-      <CartSummary />
+      <div className="cart-wrapper">
+        <CartItems />
+        <CartSummary />
+      </div>
     </div>
   );
 }

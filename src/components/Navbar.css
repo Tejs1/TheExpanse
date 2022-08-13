@@ -52,6 +52,7 @@
   z-index: 11;
 }
 .km-nav-searchbar input {
+  padding-left: 0.5rem;
   background-color: rgba(0, 0, 0, 0.4);
   font-size: 0.75rem;
   color: var(--input-border);
