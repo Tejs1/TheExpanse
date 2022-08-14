@@ -5,6 +5,7 @@ import { ShipDetails } from "./components/ShipDetails";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Cart from "./components/Cart";
+import Whishlist from "./components/Whishlist";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {/* <Route path="/" element={<ProductListing />} /> */}
         <Route path="/store" element={<Store />} />
         <Route path="cart" element={<Cart/>} />
-        {/* <Route path="whishlist" element={<Wishlist />} /> */}
+        <Route path="whishlist" element={<Whishlist />} />
         <Route path="login" element={<Login />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="/store/ships/:id" element={<ShipDetails />} />
