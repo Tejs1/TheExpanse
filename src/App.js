@@ -9,7 +9,7 @@ import Whishlist from "./components/Whishlist";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
         <Navbar />
       </header>
@@ -17,7 +17,7 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<ProductListing />} /> */}
         <Route path="/store" element={<Store />} />
-        <Route path="cart" element={<Cart/>} />
+        <Route path="cart" element={<Cart />} />
         <Route path="whishlist" element={<Whishlist />} />
         <Route path="login" element={<Login />} />
         <Route path="signUp" element={<SignUp />} />
@@ -31,7 +31,7 @@ function App() {
           }
         />
       </Routes>
-    </div>
+    </>
   );
 }
 
