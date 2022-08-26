@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Store } from "./components/Store";
-import { ShipDetails } from "./components/ShipDetails";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
-import Whishlist from "./components/Whishlist";
+import { Store } from "./pages/Store";
+import { ShipDetails } from "./pages/ShipDetails";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Cart from "./pages/Cart";
+import Whishlist from "./pages/Whishlist";
 
 function App() {
   return (

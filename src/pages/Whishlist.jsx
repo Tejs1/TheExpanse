@@ -1,6 +1,6 @@
 import React from "react";
 import "./wishlist.css";
-import WishlistProduct from "./WishlistProduct";
+import WishlistProduct from "../components/WishlistProduct";
 
 export default function Whishlist() {
   return (
