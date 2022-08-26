@@ -1,4 +1,3 @@
-
-export function showPassword(state){
-    return state ? false : true;
+export function showPassword(state) {
+  return state ? false : true;
 }

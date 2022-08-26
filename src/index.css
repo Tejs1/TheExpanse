@@ -32,6 +32,9 @@ html {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
 }
+#root {
+  width: 100vw !important;
+}
 a,
 abbr,
 acronym,

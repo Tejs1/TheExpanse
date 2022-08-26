@@ -1,6 +1,6 @@
 import React from "react";
-import { CartItems } from "./CartItems";
-import { CartSummary } from "./CartSummary";
+import { CartItems } from "../components/CartItems";
+import { CartSummary } from "../components/CartSummary";
 import "./cart.css";
 
 function Cart() {

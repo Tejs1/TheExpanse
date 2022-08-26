@@ -67,7 +67,6 @@ input:valid {
 }
 
 .auth .form-control label {
- 
   position: absolute;
   top: 0.625rem;
   pointer-events: none;
@@ -77,8 +76,8 @@ input:valid {
   pointer-events: none;
   transition: 0.3s cubic-bezier(0.65, -0.65, 0.255, 1.55);
 }
-.auth .form-control input:focus + label ,
-.auth .form-control input:valid + label  {
+.auth .form-control input:focus + label,
+.auth .form-control input:valid + label {
   transform: translateY(-1.563rem);
   color: lightblue;
 }
@@ -97,4 +96,21 @@ input:valid {
 .auth img:hover {
   filter: invert(88%) sepia(23%) saturate(484%) hue-rotate(162deg)
     brightness(92%) contrast(95%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: black;
+  -webkit-box-shadow: 0 0 0 30px rgb(0, 0, 0) inset !important;
+  -webkit-text-fill-color: aliceblue !important;
+}
+input:-webkit-autofill + label,
+input:-webkit-autofill:hover + label,
+input:-webkit-autofill:focus + label,
+input:-webkit-autofill:active + label,
+input:-webkit-autofill:valid + label {
+  transform: translateY(-1.563rem);
+  color: lightblue;
 }

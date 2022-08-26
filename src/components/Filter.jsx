@@ -19,22 +19,22 @@ export default function Filter() {
               <label>100,000</label>
               <label>over</label>
             </div>
-            <input type="range" className="range" height="5px" width="5px" />
+            <input type="range" className="range" />
           </div>
         </div>
         <div className="filter-comp">
           <h3 className="filter-heading">classification</h3>
           <ul className="list">
             <li>
-              <input type="checkbox" id="combact" />
+              <input type="checkbox" id="Combact" />
               <label htmlFor="Combact">ComBact</label>
             </li>
             <li>
-              <input type="checkbox" id="transport" />
-              <label htmlFor="TransPort">Transport</label>
+              <input type="checkbox" id="Transport" />
+              <label htmlFor="Transport">Transport</label>
             </li>
             <li>
-              <input type="checkbox" id="industrial" />
+              <input type="checkbox" id="Industrial" />
               <label htmlFor="Industrial">Industrial</label>
             </li>
           </ul>
@@ -43,16 +43,16 @@ export default function Filter() {
           <h3 className="filter-heading">Manufacturers</h3>
           <ul className="list">
             <li>
-              <input type="radio" name="rate" id="anvil" />
-              <label htmlFor="Anvil">Anvil Aerospace</label>
+              <input type="radio" name="rate" id="ANVIL" />
+              <label htmlFor="ANVIL">Anvil Aerospace</label>
             </li>
             <li>
-              <input type="radio" name="rate" id="banu" />
+              <input type="radio" name="rate" id="BANU" />
               <label htmlFor="BANU">BANU</label>
             </li>
             <li>
-              <input type="radio" name="rate" id="drake" />
-              <label htmlFor="Drake ">Drake Interplanetary</label>
+              <input type="radio" name="rate" id="DRAKE" />
+              <label htmlFor="DRAKE">Drake Interplanetary</label>
             </li>
           </ul>
         </div>
@@ -69,7 +69,7 @@ export default function Filter() {
             </li>
             <li>
               <input type="radio" name="sort" id="sorttwo" />
-              <label htmlFor="sortone">$200 to $500</label>
+              <label htmlFor="sorttwo">$200 to $500</label>
             </li>
           </ul>
         </div>

@@ -1,14 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import { Store } from "./components/Store";
-import { ShipDetails } from "./components/ShipDetails";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
+import { Store } from "./pages/Store";
+import { ShipDetails } from "./pages/ShipDetails";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import Cart from "./pages/Cart";
+import Whishlist from "./pages/Whishlist";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <header className="App-header">
         <Navbar />
       </header>
@@ -16,8 +17,8 @@ function App() {
       <Routes>
         {/* <Route path="/" element={<ProductListing />} /> */}
         <Route path="/store" element={<Store />} />
-        <Route path="cart" element={<Cart/>} />
-        {/* <Route path="whishlist" element={<Wishlist />} /> */}
+        <Route path="cart" element={<Cart />} />
+        <Route path="whishlist" element={<Whishlist />} />
         <Route path="login" element={<Login />} />
         <Route path="signUp" element={<SignUp />} />
         <Route path="/store/ships/:id" element={<ShipDetails />} />
@@ -30,7 +31,7 @@ function App() {
           }
         />
       </Routes>
-    </div>
+    </>
   );
 }
 

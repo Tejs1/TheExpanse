@@ -1,7 +1,7 @@
 import React from "react";
 import "./Store.css";
-import Filter from "./Filter";
-import ProductList from "./ProductList";
+import Filter from "../components/Filter";
+import ProductList from "../components/ProductList";
 
 export function Store() {
   return (
