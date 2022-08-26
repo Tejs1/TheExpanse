@@ -103,11 +103,9 @@
   display: block;
 }
 .smallbtn-top {
-  background-image: url("/public/img/ships/halo-add-cart-btn-new.png");
-  color: #fbfeff;
+  color: #ffffff;
   text-shadow: none;
-  background: url("/public/img/ships/halo-add-cart-btn-new.png") no-repeat
-    center -10px;
+  background: url("/public/img/ships/halo-add-cart-btn.png") no-repeat center -10px;
   width: 200px;
   height: 80px;
   z-index: 2;
@@ -121,7 +119,6 @@
   display: block;
 }
 .smallbtn-bottom {
-  background-image: url("/public/img/ships/halo-add-cart-btn-new.png");
   color: #fbfeff;
   text-shadow: none;
   background: url("/public/img/ships/halo-add-cart-btn-new.png") no-repeat
@@ -133,6 +130,17 @@
   top: 8px;
   position: absolute;
   display: block;
+}
+.smallbtn.secondary .smallbtn-top {
+  background: url("/public/img/ships/halo-add-cart-btn-secondary.png") no-repeat
+    center -10px;
+}
+.smallbtn:hover > .smallbtn-top {
+  transform: translate(10px, 0px);
+  transition-delay: 0.2s;
+}
+.smallbtn:hover > .smallbtn-bottom {
+  transform: translate(5px, -8px);
 }
 #store-wrapper .ship-item > .bottom {
   bottom: -31px;

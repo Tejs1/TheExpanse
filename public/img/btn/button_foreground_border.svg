@@ -12,10 +12,10 @@
         </linearGradient>
         <polygon id="path-3" points="0 0.000565549942 249.17791 0 269 20 269 44 20 44 0 24"></polygon>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fillRule="evenodd">
         <g id="CTA">
             <g id="Back_CTA">
-                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <use fill="url(#linearGradient-1)" fillRule="evenodd" xlink:href="#path-3"></use>
                 <path stroke="url(#linearGradient-2)" stroke-width="1" d="M0.5,0.500564415 L0.5,23.7928932 L20.2071068,43.5 L268.5,43.5 L268.5,20.2057995 L248.969494,0.500000473 L0.5,0.500564415 Z"></path>
             </g>
         </g>

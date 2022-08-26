@@ -20,13 +20,13 @@ function Product({ ship }) {
 
         <div className="content"></div>
 
-        <Link className="smallbtn a" to={"/"}>
-          <span className="smallbtn-top">Add To Cart</span>
-          <span className="smallbtn-bottom"></span>
+        <Link className="smallbtn a secondary" to={"/"}>
+          <span className="smallbtn-top trans-02s">VIEW specs</span>
+          <span className="smallbtn-bottom trans-02s"></span>
         </Link>
-        <Link to={`ships/${id}`} className="smallbtn b" ship={name}>
-          <span className="smallbtn-top">VIEW specs</span>
-          <span className="smallbtn-bottom"></span>
+        <Link to={`ships/${id}`} className="smallbtn b primary" ship={name}>
+          <span className="smallbtn-top trans-02s">Add To Cart</span>
+          <span className="smallbtn-bottom trans-02s"></span>
         </Link>
       </div>
       <div className="bottom">

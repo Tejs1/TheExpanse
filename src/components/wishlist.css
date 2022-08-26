@@ -3,10 +3,13 @@
   padding-right: 40px;
   background: #09121c;
   border-bottom: 1px solid #7af6fb;
+  min-height: 92vh;
+}
+.whishlist.products-listing .wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  min-height: 92vh;
+  justify-content: space-evenly;
 }
 .product-item {
   background: rgba(36, 63, 88, 0.35);
@@ -82,4 +85,6 @@
   transition-duration: 0.2s;
   -webkit-perspective: 1000;
   perspective: 1000;
+  /* transition-timing-function: cubic-bezier(0.65, -0.65, 0.255, 1.55); */
 }
+/* transition: 0.3s cubic-bezier(0.65, -0.65, 0.255, 1.55); */

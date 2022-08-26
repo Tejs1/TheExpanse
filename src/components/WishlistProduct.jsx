@@ -16,12 +16,16 @@ export default function WishlistProduct() {
           <span> - Roberts Space Industries</span>
         </div>
         <div className="buttons">
-          <Link to={`ships/${"id"}`} className=" smallbtn b " ship={"name"}>
-            <span className="smallbtn-top trans-02s">Add To Cart</span>
+          <Link
+            to={`ships/${"id"}`}
+            className=" smallbtn b secondary"
+            ship={"name"}
+          >
+            <span className="smallbtn-top trans-02s">Remove</span>
             <span className="smallbtn-bottom trans-02s"></span>
           </Link>
           <Link to={`ships/${"id"}`} className=" smallbtn b " ship={"name"}>
-            <span className="smallbtn-top trans-02s">Remove</span>
+            <span className="smallbtn-top trans-02s">Add To Cart</span>
             <span className="smallbtn-bottom trans-02s"></span>
           </Link>
         </div>

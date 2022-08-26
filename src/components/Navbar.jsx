@@ -47,20 +47,20 @@ function Navbar() {
           </div>
           <Link to="login">
             <span className="cta-btn">
-              <div></div>
+              <div className="trans-02s"></div>
               <span className="cta-btn__text">
                 <strong>LOGIN</strong>
               </span>
-              <div></div>
+              <div className="trans-02s"></div>
             </span>
           </Link>
           <Link to="signUp">
             <span className="cta-btn">
-              <div></div>
+              <div className="trans-02s"></div>
               <span className="cta-btn__text">
                 <strong>SIGN UP</strong>
               </span>
-              <div></div>
+              <div className="trans-02s"></div>
             </span>
           </Link>
         </div>

@@ -12,6 +12,7 @@
 }
 .km-right-nav {
   display: flex;
+  margin-right: 1.5rem;
 }
 .km-nav-icons {
   display: flex;
@@ -135,12 +136,11 @@
   border-image-source: url("/public/img/btn/button_background_border.svg");
   border-image-slice: 39 39 fill;
   border-image-width: 6.25rem;
-  width: calc(100% + 2.125rem);
-  height: calc(100% + 2rem);
-  left: -1.063rem;
-  top: -1.063rem;
+  width: calc(100% + 31.89px);
+  height: calc(100% + 32px);
+  left: -16px;
+  top: -16px;
   transform: translateX(5px) translateY(5px);
-  z-index: 3;
 }
 .cta-btn__text {
   font-family: "Orbitron";
@@ -150,6 +150,13 @@
   color: #fbfeff;
   font-size: 0.813rem;
   font-weight: 200;
+}
+.cta-btn:hover > div:first-of-type {
+  transform: translate(5px, 0px);
+  transition-delay: 0.2s;
+}
+.cta-btn:hover > div:last-of-type {
+  transform: translate(5px, 0px);
 }
 button {
   background-color: transparent;
@@ -187,16 +194,7 @@ button {
   left: 0;
   z-index: -15;
 }
-.cta-btn.main div:last-of-type {
-  width: calc(100% + 6.25rem);
-  height: calc(100% + 68px);
-  transform: translateX(-26px) translateY(-0.813rem);
-}
-.cta-btn.main div:first-of-type {
-  width: calc(100% + 3.125rem);
-  height: calc(100% + 1.125rem);
-  transform: translateX(-25px) translateY(-0.75rem);
-}
+
 .main .cta-btn__text {
   font-size: 2rem;
 }

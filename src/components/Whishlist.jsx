@@ -5,13 +5,16 @@ import WishlistProduct from "./WishlistProduct";
 export default function Whishlist() {
   return (
     <div className="whishlist products-listing">
-      <WishlistProduct />
-      <WishlistProduct />
-      <WishlistProduct />
-      <WishlistProduct />
-      <WishlistProduct />
-      <WishlistProduct />
-      <WishlistProduct />
+      <div className="wrapper">
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+        <WishlistProduct />
+      </div>
     </div>
   );
 }
