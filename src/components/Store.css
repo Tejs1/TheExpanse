@@ -221,8 +221,8 @@ label .checkbox {
   flex-direction: column;
   line-height: 1.4rem;
 }
-.list li input {
-  margin-right: 1rem;
+.list li label {
+  padding-left: 1rem;
 }
 .range {
   width: 20px;
