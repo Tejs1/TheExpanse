@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { data } from "../Utils/data";
 import { modifyLink } from "../Utils/modifyLink";
+import { useWhishlist } from "../context/whislist-context";
 const list = data.data;
 
 export function ShipDetails() {
+  const { addToWhishlist } = useWhishlist();
   const { id } = useParams();
   const currentShip = list.find((ship) => ship.id === id);
   const {
@@ -131,14 +133,14 @@ export function ShipDetails() {
               <span className="smallbtn-top trans-02s">Add To Cart</span>
               <span className="smallbtn-bottom trans-02s"></span>
             </Link>
-            <Link
-              to={`ships/${id}`}
+            <button
               className="smallbtn b holobtn add-to-whishlist"
               ship={ship_name}
+              onClick={() => addToWhishlist(id)}
             >
               <span className="smallbtn-top trans-02s">Whishlist</span>
               <span className="smallbtn-bottom trans-02s"></span>
-            </Link>
+            </button>
           </div>
         </div>
       </div>
