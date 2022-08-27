@@ -186,7 +186,7 @@ td {
   text-justify: center;
   width: 10rem;
   height: 2.5rem;
-  border: solid 1px #1b4268;
+  outline: solid 1px #1b4268;
   text-align: center;
 }
 #intro .stats table td {
