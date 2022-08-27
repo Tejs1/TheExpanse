@@ -2,8 +2,8 @@ import React from "react";
 import "./ShipDetails.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { data } from "../utils/data";
-import { modifyLink } from "../utils/modifyLink";
+import { data } from "../Utils/data";
+import { modifyLink } from "../Utils/modifyLink";
 const list = data.data;
 
 export function ShipDetails() {

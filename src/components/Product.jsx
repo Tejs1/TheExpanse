@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { modifyLink } from "../utils/modifyLink";
+import { modifyLink } from "../Utils/modifyLink";
 
 function Product({ ship }) {
   const { name, focus, max_crew, price, mass, manufacturer, media, id } = ship;
