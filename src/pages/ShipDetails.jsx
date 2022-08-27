@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "./ShipDetails.css";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -8,7 +8,7 @@ import { useWhishlist } from "../context/whislist-context";
 const list = data.data;
 
 export function ShipDetails() {
-  const { addToWhishlist } = useWhishlist();
+  const { addToWhishlist, whishlistItems } = useWhishlist();
   const { id } = useParams();
   const currentShip = list.find((ship) => ship.id === id);
   const {
@@ -45,6 +45,10 @@ export function ShipDetails() {
     known_for,
   } = manufacturer;
 
+  const [isWhishlisted, setIsWhishlisted] = useState(
+    whishlistItems.includes(id)
+  );
+
   return (
     <section id="intro">
       <div className="headline ">
@@ -55,7 +59,6 @@ export function ShipDetails() {
             <span>FROM</span>
             <img
               title={manufacturer_name + " known for " + known_for}
-              // src="/media/w0o33qmdai9wpr/icon/Anvil.png"
               src={modifyLink(manufacturer_icon)}
               alt="manufacturer_icon"
             />
@@ -129,18 +132,32 @@ export function ShipDetails() {
             </table>
           </div>
           <div className="description_cta">
+            {isWhishlisted ? (
+              <Link
+                to={`/whishlist`}
+                className="smallbtn b holobtn add-to-whishlist secondary"
+                ship={ship_name}
+              >
+                <span className="smallbtn-top trans-02s">OPEN list</span>
+                <span className="smallbtn-bottom trans-02s"></span>
+              </Link>
+            ) : (
+              <button
+                className="smallbtn b holobtn add-to-whishlist secondary"
+                ship={ship_name}
+                onClick={() => {
+                  addToWhishlist(id);
+                  setIsWhishlisted(true);
+                }}
+              >
+                <span className="smallbtn-top trans-02s">ADD TO list</span>
+                <span className="smallbtn-bottom trans-02s"></span>
+              </button>
+            )}
             <Link className="smallbtn a holobtn add-to-cart" to={"/"}>
               <span className="smallbtn-top trans-02s">Add To Cart</span>
               <span className="smallbtn-bottom trans-02s"></span>
             </Link>
-            <button
-              className="smallbtn b holobtn add-to-whishlist"
-              ship={ship_name}
-              onClick={() => addToWhishlist(id)}
-            >
-              <span className="smallbtn-top trans-02s">Whishlist</span>
-              <span className="smallbtn-bottom trans-02s"></span>
-            </button>
           </div>
         </div>
       </div>

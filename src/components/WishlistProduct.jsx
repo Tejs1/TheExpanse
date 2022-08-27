@@ -18,11 +18,13 @@ export default function WishlistProduct({ id }) {
   return (
     <div className="product-item" key={id + "whishlist"}>
       <div className="product-img">
-        <img
-          src={modifyLink(store_small)}
-          // src="https://media.robertsspaceindustries.com/pnxa8gu3m0wut/store_small.jpg"
-          alt="ship"
-        />
+        <Link to={`/store/ships/${id}`}>
+          <img
+            src={modifyLink(store_small)}
+            // src="https://media.robertsspaceindustries.com/pnxa8gu3m0wut/store_small.jpg"
+            alt="ship"
+          />
+        </Link>
       </div>
       <div className="info ">
         <div className="title">
@@ -31,7 +33,7 @@ export default function WishlistProduct({ id }) {
         </div>
         <div className="buttons">
           <Link
-            to={`ships/${"id"}`}
+            to={`/store/ships/${id}`}
             className=" smallbtn b secondary"
             ship={"name"}
           >

@@ -257,3 +257,6 @@ input {
   top: 130px;
   right: 40px;
 }
+button {
+  cursor: pointer;
+}

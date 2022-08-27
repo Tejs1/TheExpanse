@@ -20,7 +20,7 @@ function Product({ ship }) {
 
         <div className="content"></div>
 
-        <Link className="smallbtn a secondary" to={"/"}>
+        <Link to={`ships/${id}`} className="smallbtn a secondary">
           <span className="smallbtn-top trans-02s">VIEW specs</span>
           <span className="smallbtn-bottom trans-02s"></span>
         </Link>
