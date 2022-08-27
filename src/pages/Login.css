@@ -61,7 +61,7 @@
 }
 
 .auth .form-control input:focus,
-input:valid {
+.auth .form-control input:valid {
   outline: 0;
   border-bottom-color: steelblue;
 }

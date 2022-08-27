@@ -128,16 +128,16 @@ export function ShipDetails() {
           </div>
           <div className="description_cta">
             <Link className="smallbtn a holobtn add-to-cart" to={"/"}>
-              <span className="smallbtn-top">Add To Cart</span>
-              <span className="smallbtn-bottom"></span>
+              <span className="smallbtn-top trans-02s">Add To Cart</span>
+              <span className="smallbtn-bottom trans-02s"></span>
             </Link>
             <Link
               to={`ships/${id}`}
               className="smallbtn b holobtn add-to-whishlist"
               ship={ship_name}
             >
-              <span className="smallbtn-top">Whishlist</span>
-              <span className="smallbtn-bottom"></span>
+              <span className="smallbtn-top trans-02s">Whishlist</span>
+              <span className="smallbtn-bottom trans-02s"></span>
             </Link>
           </div>
         </div>
