@@ -1,6 +1,6 @@
 import { modifyLink } from "../Utils/modifyLink";
 
-export function ProductStats(max_crew, price, mass, manufacturer_logo) {
+export function ProductStats({ max_crew, price, mass, manufacturer_logo }) {
   return (
     <div className="bottom">
       <span className="crew spec">
