@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { modifyLink } from "../utils/modifyLink";
+import { modifyLink } from "../Utils/modifyLink";
 
 function Product({ ship }) {
   const { name, focus, max_crew, price, mass, manufacturer, media, id } = ship;
@@ -20,7 +20,7 @@ function Product({ ship }) {
 
         <div className="content"></div>
 
-        <Link className="smallbtn a secondary" to={"/"}>
+        <Link to={`ships/${id}`} className="smallbtn a secondary">
           <span className="smallbtn-top trans-02s">VIEW specs</span>
           <span className="smallbtn-bottom trans-02s"></span>
         </Link>

@@ -1,6 +1,6 @@
 import React from "react";
 import Product from "./Product";
-import { data } from "../utils/data";
+import { data } from "../Utils/data";
 const list = data.data;
 
 function ProductList() {
