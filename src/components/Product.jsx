@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { modifyLink } from "../Utils/modifyLink";
+import { ProductStats } from "./ProductStats";
 
 function Product({ ship }) {
   const { name, focus, max_crew, price, mass, manufacturer, media, id } = ship;
@@ -29,27 +30,12 @@ function Product({ ship }) {
           <span className="smallbtn-bottom trans-02s"></span>
         </Link>
       </div>
-      <div className="bottom">
-        <span className="crew spec">
-          Max Crew / Human :<span>{max_crew}</span>
-        </span>
-        <span className="length spec">
-          PRICE / Starcoin:<span>{price}</span>
-        </span>
-        <span className="mass spec">
-          Mass / Kg :<span>{mass}</span>
-        </span>
-        <span className="manufacturer spec">
-          Manufacturer :
-          <img
-            className="logo"
-            height="31"
-            width="31"
-            src={modifyLink(manufacturer_logo)}
-            alt="logo"
-          />
-        </span>
-      </div>
+      <ProductStats
+        max_crew={max_crew}
+        price={price}
+        mass={mass}
+        manufacturer_logo={manufacturer_logo}
+      />
     </li>
   );
 }
