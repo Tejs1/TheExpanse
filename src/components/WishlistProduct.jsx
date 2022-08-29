@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { data } from "../Utils/data";
 import { modifyLink } from "../Utils/modifyLink";
+import { useWhishlist } from "../context/whislist-context";
 const list = data.data;
 
 export default function WishlistProduct({ id }) {
+  const { removeFromWhishlist } = useWhishlist();
   const currentShip = list.find((ship) => ship.id === id);
   const {
     manufacturer,
@@ -31,19 +33,15 @@ export default function WishlistProduct({ id }) {
           {ship_name}
           <span> - {manufacturer.name}</span>
         </div>
-        <div className="buttons">
-          <Link
-            to={`/store/ships/${id}`}
-            className=" smallbtn b secondary"
-            ship={"name"}
-          >
+        <div className="buttons" onClick={() => removeFromWhishlist(id)}>
+          <button className=" smallbtn b secondary" ship={"name"}>
             <span className="smallbtn-top trans-02s">Remove</span>
             <span className="smallbtn-bottom trans-02s"></span>
-          </Link>
-          <Link to={`ships/${"id"}`} className=" smallbtn b " ship={"name"}>
+          </button>
+          <button className=" smallbtn b " ship={"name"}>
             <span className="smallbtn-top trans-02s">Add To Cart</span>
             <span className="smallbtn-bottom trans-02s"></span>
-          </Link>
+          </button>
         </div>
       </div>
     </div>

@@ -11,9 +11,15 @@ const WhishlistProvider = ({ children }) => {
   function addToWhishlist(item) {
     setWhishlistItems((whishlistItems) => [...whishlistItems, item]);
   }
+  function removeFromWhishlist(item) {
+    setWhishlistItems(whishlistItems.filter((id) => id !== item));
+  }
+
   return (
     <>
-      <WhishlistContext.Provider value={{ addToWhishlist, whishlistItems }}>
+      <WhishlistContext.Provider
+        value={{ addToWhishlist, whishlistItems, removeFromWhishlist }}
+      >
         {children}
       </WhishlistContext.Provider>
     </>
