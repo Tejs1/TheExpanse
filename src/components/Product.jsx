@@ -1,14 +1,27 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { modifyLink } from "../Utils/modifyLink";
+import { ProductStats } from "./ProductStats";
 
 function Product({ ship }) {
   const { name, focus, max_crew, price, mass, manufacturer, media, id } = ship;
   const { store_large } = media[0].images;
   const { logo: manufacturer_logo } = manufacturer.media[0].images;
+  const [isHovered, setIsHoverd] = useState(false);
+  function handleMouseEnter() {
+    setIsHoverd(true);
+  }
 
+  function handleMouseLeave() {
+    setIsHoverd(false);
+  }
   return (
     <li className="ship-item">
-      <div className="center ">
+      <div
+        className="center"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <img src={modifyLink(store_large)} className="ship" alt={name} />
         <div className="blue-overlay"></div>
         {/* .blue-overlay should come when we hover */}
@@ -17,8 +30,8 @@ function Product({ ship }) {
             {name} <span className="focus"> - {focus}</span>
           </span>
         </Link>
-
-        <div className="content"></div>
+        <div className="content hover"></div>
+        <div className={`content trans-02s ${isHovered ? "hover" : "n"}`}></div>
 
         <Link to={`ships/${id}`} className="smallbtn a secondary">
           <span className="smallbtn-top trans-02s">VIEW specs</span>
@@ -29,27 +42,12 @@ function Product({ ship }) {
           <span className="smallbtn-bottom trans-02s"></span>
         </Link>
       </div>
-      <div className="bottom">
-        <span className="crew spec">
-          Max Crew / Human :<span>{max_crew}</span>
-        </span>
-        <span className="length spec">
-          PRICE / Starcoin:<span>{price}</span>
-        </span>
-        <span className="mass spec">
-          Mass / Kg :<span>{mass}</span>
-        </span>
-        <span className="manufacturer spec">
-          Manufacturer :
-          <img
-            className="logo"
-            height="31"
-            width="31"
-            src={modifyLink(manufacturer_logo)}
-            alt="logo"
-          />
-        </span>
-      </div>
+      <ProductStats
+        max_crew={max_crew}
+        price={price}
+        mass={mass}
+        manufacturer_logo={manufacturer_logo}
+      />
     </li>
   );
 }
