@@ -7,7 +7,6 @@ export default function CartProduct({ product }) {
   const { itemId, itemQuantity } = product;
   const currentShip = list.find((ship) => ship.id === itemId);
   const {
-    manufacturer,
     name: ship_name,
     media: [
       {
