@@ -13,6 +13,7 @@ export default function CartProduct({ product }) {
         images: { store_small },
       },
     ],
+    price,
   } = currentShip;
   return (
     <div className="item">
@@ -62,7 +63,7 @@ export default function CartProduct({ product }) {
               <div className="PriceCompact">
                 <div className="Price-price-bloc">
                   <span className="Price-price">
-                    <span className="Price-price-integer">310</span>
+                    <span className="Price-price-integer">{price}</span>
                   </span>
                   <div className="Price-price-extra">
                     <span className="Price-currency-code">USD</span>
