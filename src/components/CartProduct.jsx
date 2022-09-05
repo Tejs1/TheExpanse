@@ -1,15 +1,26 @@
 import React from "react";
+import { data } from "../Utils/data";
+import { modifyLink } from "../Utils/modifyLink";
+const list = data.data;
 
-export default function CartProduct() {
+export default function CartProduct({ product }) {
+  const { itemId, itemQuantity } = product;
+  const currentShip = list.find((ship) => ship.id === itemId);
+  const {
+    manufacturer,
+    name: ship_name,
+    media: [
+      {
+        images: { store_small },
+      },
+    ],
+  } = currentShip;
   return (
     <div className="item">
       <div className="item__wrapper">
         <header className="item__header">
           <div className="item__thumbnail">
-            <img
-              alt="ship"
-              src="https://media.robertsspaceindustries.com/x05t2v69f2frf/store_small.jpg"
-            />
+            <img alt={ship_name} src={modifyLink(store_small)} />
           </div>
           <div className="item__information">
             <span className="SkuIcon">
@@ -32,7 +43,7 @@ export default function CartProduct() {
               </svg>
             </span>
             <a href="/" target="_blank">
-              <h4 className="item__title">Constellation Aquila</h4>
+              <h4 className="item__title">{ship_name}</h4>
             </a>
             <span className="item__subtitle">Standalone Ship</span>
             <p className="item__stock">in stock</p>
@@ -41,7 +52,7 @@ export default function CartProduct() {
         <div className="item__quantity">
           <div className="quantity-selector">
             <button>+</button>
-            <div className="quantity">7</div>
+            <div className="quantity">{itemQuantity}</div>
             <button>-</button>
           </div>
         </div>
