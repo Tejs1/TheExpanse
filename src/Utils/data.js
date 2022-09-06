@@ -553,7 +553,7 @@ export const data = {
         name: "Consolidated Outland",
       },
       manufacturer_id: "22",
-      mass: "32970",
+      mass: "82970",
       max_crew: "1",
       media: [
         {
@@ -4433,7 +4433,7 @@ export const data = {
         name: "Origin Jumpworks",
       },
       manufacturer_id: "6",
-      mass: null,
+      mass: "30000",
       max_crew: "1",
       media: [
         {
@@ -5402,7 +5402,7 @@ export const data = {
         name: "Origin Jumpworks",
       },
       manufacturer_id: "6",
-      mass: null,
+      mass: "10000",
       max_crew: "1",
       media: [
         {
@@ -6360,7 +6360,7 @@ export const data = {
         name: "Origin Jumpworks",
       },
       manufacturer_id: "6",
-      mass: null,
+      mass: "55000",
       max_crew: "1",
       media: [
         {

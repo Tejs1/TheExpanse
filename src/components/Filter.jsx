@@ -1,6 +1,44 @@
-import React from "react";
+import { useState } from "react";
+import { data } from "../Utils/data";
+const list = data.data;
 
 export default function Filter() {
+  const [state, dispatch] = useState({ priceRange: "" });
+  function rangeHandler(range) {
+    console.log(filterByMassRange(range, list));
+    dispatch({ priceRange: range });
+  }
+
+  const filterByMassRange = (range, products) => {
+    switch (range) {
+      case "0":
+        return [...products]
+          .filter((product) => Number(product.mass) < 20000)
+          .map((ship) => ship.name);
+      case "25000":
+        return [...products]
+          .filter((product) => Number(product.mass) <= 25000)
+          .map((ship) => ship.name);
+      case "50000":
+        return [...products]
+          .filter((product) => Number(product.mass) <= 50000)
+          .map((ship) => ship.name);
+      case "75000":
+        return [...products]
+          .filter((product) => Number(product.mass) <= 75000)
+          .map((ship) => ship.name);
+      case "100000":
+        return [...products]
+          .filter((product) => Number(product.mass) <= 100000)
+          .map((ship) => ship.name);
+      case "125000":
+        return [...products]
+          .filter((product) => Number(product.mass) > 100000)
+          .map((ship) => ship.name);
+      default:
+        return products;
+    }
+  };
   return (
     <div className="filter">
       <section className="filter-bar">
@@ -12,14 +50,23 @@ export default function Filter() {
           <h3 className="filter-heading">Mass [KG]</h3>
           <div className="range-list">
             <div className="weight list">
-              <label>below</label>
-              <label>20,000</label>
-              <label>50,000</label>
-              <label>80,000</label>
-              <label>100,000</label>
               <label>over</label>
+              <label>100,000</label>
+              <label>75,000</label>
+              <label>50,000</label>
+              <label>25,000</label>
+              <label>below</label>
             </div>
-            <input type="range" className="range" />
+            <input
+              type="range"
+              className="range"
+              list="steplist"
+              step="25000"
+              min="0"
+              max="125000"
+              value={state.priceRange}
+              onChange={(e) => rangeHandler(e.target.value)}
+            />
           </div>
         </div>
         <div className="filter-comp">
