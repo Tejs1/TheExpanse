@@ -1,0 +1,101 @@
+.range-slider .slider {
+  position: relative;
+  width: 130px;
+}
+
+.range-slider .slider__track,
+.range-slider .slider__range,
+.range-slider .slider__left-value,
+.range-slider .slider__right-value {
+  position: absolute;
+}
+
+.range-slider .slider__track,
+.range-slider .slider__range {
+  height: 8px;
+}
+
+.range-slider .slider__track {
+  background-color: var(--nav-background);
+  outline: 1px solid var(--nav-border);
+  width: 100%;
+  z-index: 1;
+}
+
+.range-slider .slider__range {
+  background-color: #87c2ddd4;
+  z-index: 2;
+}
+
+.range-slider .slider__left-value,
+.range-slider .slider__right-value {
+  color: #dee2e6;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.range-slider .slider__left-value {
+  left: 6px;
+}
+
+.range-slider .slider__right-value {
+  right: -4px;
+}
+
+/* Removing the default appearance */
+.range-slider .thumb,
+.range-slider .thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.range-slider .thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  outline: none;
+}
+
+.range-slider .thumb--zindex-3 {
+  z-index: 3;
+}
+
+.range-slider .thumb--zindex-4 {
+  z-index: 4;
+}
+
+.range-slider .thumb--zindex-5 {
+  z-index: 5;
+}
+
+/* For Chrome browsers */
+.range-slider .thumb::-webkit-slider-thumb {
+  outline: 1px solid black;
+  background-color: #87c2dd;
+  border: none;
+  cursor: pointer;
+  height: 16px;
+  width: 12px;
+  margin-top: 8px;
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.range-slider .thumb::-moz-range-thumb {
+  background-color: var(--nav-background);
+  border: none;
+  cursor: pointer;
+  height: 16px;
+  width: 12px;
+  margin-top: 8px;
+  pointer-events: all;
+  position: relative;
+}
+.range-slider {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-90deg);
+}

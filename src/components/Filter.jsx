@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { data } from "../Utils/data";
+import TwoRangeSlider from "./TwoWaySlider";
 const list = data.data;
 
 export default function Filter() {
-  const [state, dispatch] = useState({ priceRange: "" });
-  function rangeHandler(range) {
-    console.log(filterByMassRange(range, list));
-    dispatch({ priceRange: range });
+  const [state, dispatch] = useState({ priceRange: { min: 0, max: 125000 } });
+  function rangeHandler(min, max) {
+    console.log(state);
+    console.log(filterByMassRange(min, max, list));
+    dispatch({ priceRange: { min: min, max: max } });
   }
 
   const filterByMassRange = (range, products) => {
@@ -57,15 +59,13 @@ export default function Filter() {
               <label>25,000</label>
               <label>below</label>
             </div>
-            <input
-              type="range"
-              className="range"
-              list="steplist"
-              step="25000"
-              min="0"
-              max="125000"
-              value={state.priceRange}
-              onChange={(e) => rangeHandler(e.target.value)}
+            <TwoRangeSlider
+              min={0}
+              max={125000}
+              onChange={({ min, max }) => {
+                // rangeHandler(min, max);
+                console.log(`min = ${min}, max = ${max}`);
+              }}
             />
           </div>
         </div>
