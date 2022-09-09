@@ -1,8 +1,14 @@
+.range-slider {
+  position: relative;
+  transform: rotate(-90deg);
+}
 .range-slider .slider {
   position: relative;
   width: 130px;
 }
-
+.range-slider input {
+  width: 130px;
+}
 .range-slider .slider__track,
 .range-slider .slider__range,
 .range-slider .slider__left-value,
@@ -91,11 +97,4 @@
   margin-top: 8px;
   pointer-events: all;
   position: relative;
-}
-.range-slider {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-90deg);
 }

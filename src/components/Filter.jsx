@@ -5,6 +5,8 @@ const list = data.data;
 
 export default function Filter() {
   const [state, dispatch] = useState({ priceRange: { min: 0, max: 125000 } });
+  const [rangeMinVal, setRangeMinVal] = useState(0);
+  const [rangeMaxVal, setRangeMaxVal] = useState(125000);
   function rangeHandler(min, max) {
     console.log(state);
     console.log(filterByMassRange(min, max, list));
@@ -49,24 +51,31 @@ export default function Filter() {
           <button>Clear</button>
         </div>
         <div className="filter-comp">
-          <h3 className="filter-heading">Mass [KG]</h3>
-          <div className="range-list">
-            <div className="weight list">
-              <label>over</label>
-              <label>100,000</label>
-              <label>75,000</label>
-              <label>50,000</label>
-              <label>25,000</label>
-              <label>below</label>
+          <div className="filter-mass">
+            <h3 className="filter-heading">Mass [KG]</h3>
+            <div className="mass-wrapper">
+              <div className="range-list">
+                <TwoRangeSlider
+                  min={0}
+                  max={125000}
+                  minVal={rangeMinVal}
+                  maxVal={rangeMaxVal}
+                  setMaxVal={setRangeMaxVal}
+                  setMinVal={setRangeMinVal}
+                  onChange={({ min, max }) => {
+                    console.log(`min = ${min}, max = ${max}`);
+                  }}
+                />
+              </div>
+              <div className="weight-list">
+                <label>over</label>
+                <label>100,000</label>
+                <label>75,000</label>
+                <label>50,000</label>
+                <label>25,000</label>
+                <label>below</label>
+              </div>
             </div>
-            <TwoRangeSlider
-              min={0}
-              max={125000}
-              onChange={({ min, max }) => {
-                // rangeHandler(min, max);
-                console.log(`min = ${min}, max = ${max}`);
-              }}
-            />
           </div>
         </div>
         <div className="filter-comp">

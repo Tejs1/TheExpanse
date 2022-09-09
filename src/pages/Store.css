@@ -200,7 +200,6 @@ label .checkbox {
 
 .filter-comp {
   display: flex;
-
   justify-content: space-between;
   margin: 1rem 0;
   flex-direction: column;
@@ -215,20 +214,25 @@ label .checkbox {
 .filter-heading {
   margin-bottom: 0.5rem;
 }
-.range-list {
+.mass-wrapper {
   display: flex;
-  flex-direction: row-reverse;
-  align-content: stretch;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: nowrap;
+  flex-direction: row;
 }
-.weight {
+.range-list {
+  height: 150px;
+  width: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weight-list {
   margin-left: 1rem;
-  height: max-content;
+  height: 150px;
   display: flex;
   flex-direction: column;
   line-height: 1.4rem;
+  justify-content: center;
 }
 .list li label {
   padding-left: 1rem;
