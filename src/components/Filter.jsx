@@ -4,43 +4,23 @@ import TwoRangeSlider from "./TwoWaySlider";
 const list = data.data;
 
 export default function Filter() {
-  const [state, dispatch] = useState({ priceRange: { min: 0, max: 125000 } });
   const [rangeMinVal, setRangeMinVal] = useState(0);
   const [rangeMaxVal, setRangeMaxVal] = useState(125000);
   function rangeHandler(min, max) {
-    console.log(state);
     console.log(filterByMassRange(min, max, list));
-    dispatch({ priceRange: { min: min, max: max } });
   }
 
-  const filterByMassRange = (range, products) => {
-    switch (range) {
-      case "0":
-        return [...products]
-          .filter((product) => Number(product.mass) < 20000)
-          .map((ship) => ship.name);
-      case "25000":
-        return [...products]
-          .filter((product) => Number(product.mass) <= 25000)
-          .map((ship) => ship.name);
-      case "50000":
-        return [...products]
-          .filter((product) => Number(product.mass) <= 50000)
-          .map((ship) => ship.name);
-      case "75000":
-        return [...products]
-          .filter((product) => Number(product.mass) <= 75000)
-          .map((ship) => ship.name);
-      case "100000":
-        return [...products]
-          .filter((product) => Number(product.mass) <= 100000)
-          .map((ship) => ship.name);
-      case "125000":
-        return [...products]
-          .filter((product) => Number(product.mass) > 100000)
-          .map((ship) => ship.name);
-      default:
-        return products;
+  const filterByMassRange = (min, max, products) => {
+    if (max === 125000) {
+      return [...products]
+        .filter((product) => Number(product.mass) > min)
+        .map((ship) => ship.name);
+    } else {
+      return [...products]
+        .filter(
+          (product) => min < Number(product.mass) && Number(product.mass) < max
+        )
+        .map((ship) => ship.name);
     }
   };
   return (
@@ -63,7 +43,7 @@ export default function Filter() {
                   setMaxVal={setRangeMaxVal}
                   setMinVal={setRangeMinVal}
                   onChange={({ min, max }) => {
-                    console.log(`min = ${min}, max = ${max}`);
+                    rangeHandler(min, max);
                   }}
                 />
               </div>

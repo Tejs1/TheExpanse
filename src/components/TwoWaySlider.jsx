@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 import "./twoRangeSlider.css";
@@ -26,7 +26,6 @@ const TwoRangeSlider = ({
 
   // Set width of the range to decrease from the left side
   useEffect(() => {
-    console.log(minVal);
     if (maxValRef.current) {
       const minPercent = getPercent(minVal);
       const maxPercent = getPercent(+maxValRef.current.value); // Preceding with '+' converts the value from type string to type number
@@ -40,7 +39,6 @@ const TwoRangeSlider = ({
 
   // Set width of the range to decrease from the right side
   useEffect(() => {
-    console.log(maxVal);
     if (minValRef.current) {
       const minPercent = getPercent(+minValRef.current.value);
       const maxPercent = getPercent(maxVal);

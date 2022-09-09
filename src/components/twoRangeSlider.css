@@ -19,11 +19,11 @@
 .range-slider .slider__track,
 .range-slider .slider__range {
   height: 8px;
+  outline: 1px solid var(--nav-border);
 }
 
 .range-slider .slider__track {
   background-color: var(--nav-background);
-  outline: 1px solid var(--nav-border);
   width: 100%;
   z-index: 1;
 }
@@ -89,7 +89,8 @@
 
 /* For Firefox browsers */
 .range-slider .thumb::-moz-range-thumb {
-  background-color: var(--nav-background);
+  outline: 1px solid black;
+  background-color: #87c2dd;
   border: none;
   cursor: pointer;
   height: 16px;
