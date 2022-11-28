@@ -52,6 +52,7 @@
 .range-slider .thumb,
 .range-slider .thumb::-webkit-slider-thumb {
   -webkit-appearance: none;
+  appearance: none;
   -webkit-tap-highlight-color: transparent;
 }
 

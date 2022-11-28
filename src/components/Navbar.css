@@ -122,7 +122,7 @@
   height: 100%;
   width: 100%;
   border: 1px solid transparent;
-  border-image-source: url("/public/img/btn/button_foreground_border.svg");
+  border-image-source: url("/img/btn/button_foreground_border.svg");
   border-image-slice: 20 20 fill;
   border-image-width: 6.25rem;
   left: 0;
@@ -133,7 +133,7 @@
 
 .cta-btn div:last-of-type {
   border: 1px solid transparent;
-  border-image-source: url("/public/img/btn/button_background_border.svg");
+  border-image-source: url("/img/btn/button_background_border.svg");
   border-image-slice: 39 39 fill;
   border-image-width: 6.25rem;
   width: calc(100% + 31.89px);

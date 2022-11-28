@@ -22,16 +22,6 @@ export default function Whishlist() {
         <div className="yhf">
           <p>hhhh</p>
         </div>
-        <style jsx>
-          {`
-            .container {
-              margin: 50px;
-            }
-            p {
-              color: ${redo};
-            }
-          `}
-        </style>
       </div>
     </div>
   );

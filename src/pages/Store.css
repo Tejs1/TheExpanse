@@ -74,7 +74,7 @@
   margin-top: -68px;
   width: 901px;
   height: 136px;
-  background: url("/public/img/ships/filet_bg.png") center center;
+  background: url("/img/ships/filet_bg.png") center center;
 }
 .center .filet .name {
   position: absolute;
@@ -99,7 +99,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: url("/public/img/ships/game-package-blue-overlay.png") repeat;
+  background: url("/img/ships/game-package-blue-overlay.png") repeat;
 }
 
 .smallbtn {
@@ -114,7 +114,7 @@
 .smallbtn-top {
   color: #ffffff;
   text-shadow: none;
-  background: url("/public/img/ships/halo-add-cart-btn.png") no-repeat center -10px;
+  background: url("/img/ships/halo-add-cart-btn.png") no-repeat center -10px;
   width: 200px;
   height: 80px;
   z-index: 2;
@@ -130,8 +130,7 @@
 .smallbtn-bottom {
   color: #fbfeff;
   text-shadow: none;
-  background: url("/public/img/ships/halo-add-cart-btn-new.png") no-repeat
-    center -110px;
+  background: url("/img/ships/halo-add-cart-btn-new.png") no-repeat center -110px;
   width: 200px;
   height: 80px;
   z-index: 1;
@@ -141,8 +140,7 @@
   display: block;
 }
 .smallbtn.secondary .smallbtn-top {
-  background: url("/public/img/ships/halo-add-cart-btn-secondary.png") no-repeat
-    center -10px;
+  background: url("/img/ships/halo-add-cart-btn-secondary.png") no-repeat center -10px;
 }
 .smallbtn:hover > .smallbtn-top {
   transform: translate(10px, 0px);
@@ -157,7 +155,7 @@
   position: absolute;
   width: 800px;
   height: 31px;
-  background: url("/public/img/ships/specs.png") bottom right;
+  background: url("/img/ships/specs.png") bottom right;
   z-index: 2;
   background-size: cover;
 }

@@ -7,7 +7,7 @@ import { modifyLink } from "../Utils/modifyLink";
 import { useWhishlist } from "../context/whislist-context";
 const list = data.data;
 
-export function ShipDetails() {
+export default function ShipDetails() {
   const { addToWhishlist, whishlistItems } = useWhishlist();
   const { id } = useParams();
   const currentShip = list.find((ship) => ship.id === id);

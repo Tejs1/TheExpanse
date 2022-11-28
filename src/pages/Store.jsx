@@ -3,7 +3,7 @@ import "./Store.css";
 import Filter from "../components/Filter";
 import ProductList from "../components/ProductList";
 
-export function Store() {
+export default function Store() {
   return (
     <div className="container">
       <Filter />
