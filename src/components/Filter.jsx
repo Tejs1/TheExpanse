@@ -8,7 +8,7 @@ export default function Filter() {
   const [rangeMinVal, setRangeMinVal] = useState(0);
   const [rangeMaxVal, setRangeMaxVal] = useState(125000);
   function rangeHandler(min, max) {
-    const filterdShipsByRange = filterByMassRange(min, max, list);
+    const filterdShipsByRange = console.log(filterByMassRange(min, max, list));
   }
 
   const filterByMassRange = (min, max, products) => {
@@ -24,8 +24,21 @@ export default function Filter() {
         .map((ship) => ship.name);
     }
   };
+  const filterByManufacturer = (manufacture_name, products) => {
+    if (manufacture_name === "ALL") {
+      return [...products].map((ship) => [ship.name, ship.manufacturer.name]);
+    } else {
+      return [...products]
+        .filter(
+          (product) =>
+            product.manufacturer.name.toUpperCase() ===
+            manufacture_name.toUpperCase()
+        )
+        .map((ship) => [ship.name, ship.manufacturer.name]);
+    }
+  };
   const manufacturesList = getCategories();
-  console.log(manufacturesList);
+  console.log(filterByManufacturer("CONSOLIDATED OUTLAND", list));
   return (
     <div className="filter">
       <section className="filter-bar">
@@ -79,6 +92,10 @@ export default function Filter() {
         <div className="filter-comp manufacturer">
           <h3 className="filter-heading">Manufacturers</h3>
           <ul className="list">
+            <li key="ALL">
+              <input type="radio" name="rate" id="ALL" />
+              <label htmlFor="ALL">"ALL"</label>
+            </li>
             {manufacturesList.map((manufacture_name) => (
               <li key={manufacture_name}>
                 <input type="radio" name="rate" id={manufacture_name} />

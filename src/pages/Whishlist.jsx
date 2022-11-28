@@ -5,6 +5,7 @@ import { useWhishlist } from "../context/whislist-context";
 
 export default function Whishlist() {
   const { whishlistItems } = useWhishlist();
+  const redo = "red";
 
   return (
     <div className="whishlist products-listing">
@@ -15,6 +16,22 @@ export default function Whishlist() {
             key={"wishlisted" + whishlistItemId}
           />
         ))}
+      </div>
+      <div className="stylescss">
+        <div className="container">ASDF</div>
+        <div className="yhf">
+          <p>hhhh</p>
+        </div>
+        <style jsx>
+          {`
+            .container {
+              margin: 50px;
+            }
+            p {
+              color: ${redo};
+            }
+          `}
+        </style>
       </div>
     </div>
   );
