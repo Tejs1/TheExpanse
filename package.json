@@ -1,8 +1,9 @@
 {
   "name": "expanse",
   "version": "1.0.0",
-  "description": "Eccomerce store for buying in Game ships, items",
-  "main": "index.js",
+  "description": "Eccommerce store for buying in Game ships, items",
+  "type": "module",
+  "main": "index.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-react": "2.1.0",
+    "classnames": "^2.3.1",
     "eslint": "8.24.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
