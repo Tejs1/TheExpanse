@@ -1,7 +1,7 @@
 {
   "name": "expanse",
   "version": "1.0.0",
-  "description": "Eccommerce store for buying in Game ships, items",
+  "description": "Eccomerce store for buying in Game ships, items",
   "type": "module",
   "main": "index.jsx",
   "scripts": {
