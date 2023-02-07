@@ -37,8 +37,9 @@ export default function Filter() {
         .map((ship) => [ship.name, ship.manufacturer.name]);
     }
   };
-  const manufacturesList = getCategories();
-  console.log(filterByManufacturer("CONSOLIDATED OUTLAND", list));
+  const [manufacturesList, classificationList, priceList] = getCategories();
+  // console.log(priceList, manufacturesList, typeList);
+  // console.log(filterByManufacturer("CONSOLIDATED OUTLAND", list));
   return (
     <div className="filter">
       <section className="filter-bar">
@@ -73,20 +74,18 @@ export default function Filter() {
           </div>
         </div>
         <div className="filter-comp type">
-          <h3 className="filter-heading">classification</h3>
+          <h3 className="filter-heading">classiFication</h3>
           <ul className="list">
-            <li>
-              <input type="checkbox" id="Combact" />
-              <label htmlFor="Combact">ComBact</label>
-            </li>
-            <li>
-              <input type="checkbox" id="Transport" />
-              <label htmlFor="Transport">Transport</label>
-            </li>
-            <li>
-              <input type="checkbox" id="Industrial" />
-              <label htmlFor="Industrial">Industrial</label>
-            </li>
+            {classificationList.map((type, idx) => (
+              <li key={"classification" + type}>
+                <input
+                  type="checkbox"
+                  id={type}
+                  onChange={(e) => console.log(e)}
+                />
+                <label htmlFor={type}>{type}</label>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="filter-comp manufacturer">
@@ -94,11 +93,16 @@ export default function Filter() {
           <ul className="list">
             <li key="ALL">
               <input type="radio" name="rate" id="ALL" />
-              <label htmlFor="ALL">"ALL"</label>
+              <label htmlFor="ALL">ALL</label>
             </li>
             {manufacturesList.map((manufacture_name) => (
               <li key={manufacture_name}>
-                <input type="radio" name="rate" id={manufacture_name} />
+                <input
+                  type="radio"
+                  name="rate"
+                  id={manufacture_name}
+                  onChange={(e) => console.log(e.target.value)}
+                />
                 <label htmlFor={manufacture_name}>
                   {manufacture_name.toUpperCase()}
                 </label>
